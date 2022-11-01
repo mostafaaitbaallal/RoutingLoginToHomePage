@@ -1,1 +1,27 @@
-<p>login works!</p>
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+        <mat-toolbar color="">
+            <span>Authentification</span>   
+        </mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+
+            <mat-form-field>
+              <input matInput placeholder="Username" formControlName="username" required="">
+              <mat-error *ngIf="!loginForm.controls['username'].valid">
+                Username is not valid
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput  type="password" placeholder="Password" formControlName="password">
+                <mat-error *ngIf="!loginForm.controls['password'].valid">
+                    Password is not valid
+                  </mat-error>
+            </mat-form-field>
+            <button mat-raised-button type="submit" color="primary">
+                Login
+            </button>
+          </form>
+          
+    </mat-card> 
+</div>

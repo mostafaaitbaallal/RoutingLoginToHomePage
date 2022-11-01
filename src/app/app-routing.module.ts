@@ -20,9 +20,13 @@ import { ForgotPasswordComponent } from './views/auth/forgot-password/forgot-pas
 import { NotFoundComponent } from './views/shared/not-found/not-found.component';
 
 const routes: Routes = [
-
   {
-    path: "main",
+    path: "Login2",
+    component: LoginComponent,
+     pathMatch: "full" 
+  },
+  {
+    path: "Main",
     component: MainComponent,
     children: [
       { path: "ListStudent", component: ListStudentComponent },
