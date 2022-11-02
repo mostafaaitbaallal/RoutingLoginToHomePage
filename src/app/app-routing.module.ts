@@ -21,17 +21,17 @@ import { NotFoundComponent } from './views/shared/not-found/not-found.component'
 
 const routes: Routes = [
   {
-    path: "Login2",
+    path: "",
     component: LoginComponent,
      pathMatch: "full" 
   },
   {
-    path: "Main",
+    path: "main",
     component: MainComponent,
     children: [
-      { path: "ListStudent", component: ListStudentComponent },
+      { path: "ListStudent", component: ListStudentComponent},
       { path: "AddStudent", component: AddStudentComponent },
-      { path: "", redirectTo: "listStudent", pathMatch: "full" },
+      { path: "listStudent", redirectTo: "listStudent", pathMatch: "full" },
     ],
   },
   {

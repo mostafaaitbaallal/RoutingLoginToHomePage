@@ -1,6 +1,30 @@
-<p>Main NavBar</p>
-<p>Main Header</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+
+      <h1>TreeEdu System</h1>
+
+      <button mat-icon-button>
+        <!-- <mat-icon (click)="sidenav.toggle()">menu</mat-icon> -->
+        <mat-icon>menu</mat-icon>
+      </button>
+      
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/main/ListStudent'"> Student </a>
+        <a mat-button [routerLink]="'/main/ListStudent'"> Teacher </a>  
+        <a mat-button [routerLink]="'/main/ListStudent'"> Course </a>
+      </div>
+    </mat-toolbar-row>
+  
+    <!-- <mat-toolbar-row>
+        <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
+      </mat-toolbar-row> -->
+  </mat-toolbar>
 <router-outlet></router-outlet>
-<p>Main Footer</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <h1>Scarlet Spur IT</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
 
 

@@ -1,8 +1,12 @@
-<div fxLayoutAlign="center center" fxFlexFill class="main-div">
-    <mat-card fxFlex="25">
-        <mat-toolbar color="">
-            <span>Authentification</span>   
+<div fxLayoutAlign="center stretch">
+    <mat-card fxFlex="50">
+        <mat-toolbar>
+            <span>Authentification</span>
         </mat-toolbar>
+
+        <mat-toolbar>
+          <span>UserName : admin@admin.edu Password : 123456  </span>
+      </mat-toolbar>
         <form fxLayoutAlign="stretch" fxLayout="column" (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
 
             <mat-form-field>
@@ -18,9 +22,17 @@
                     Password is not valid
                   </mat-error>
             </mat-form-field>
+            
             <button mat-raised-button type="submit" color="primary">
                 Login
             </button>
+            <div>
+            <mat-error *ngIf="isAuth">
+              UseName or Password is invalid
+            </mat-error>                          
+          </div>
+          
+            
           </form>
           
     </mat-card> 
