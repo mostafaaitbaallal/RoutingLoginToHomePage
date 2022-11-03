@@ -1,24 +1,18 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-
-      <h1>TreeEdu System</h1>
-
-      <button mat-icon-button>
-        <!-- <mat-icon (click)="sidenav.toggle()">menu</mat-icon> -->
-        <mat-icon>menu</mat-icon>
-      </button>
-      
-      <span class="menu-spacer"></span>
-      <div>
+    <mat-toolbar   color="primary">
+      <mat-toolbar-row>
+        <h1>TreeEdu System</h1>
+        <button mat-icon-button>
+          <!-- <mat-icon (click)="sidenav.toggle()">menu</mat-icon> -->
+          <mat-icon>menu</mat-icon>
+        </button>
         <a mat-button [routerLink]="'/main/ListStudent'"> Student </a>
         <a mat-button [routerLink]="'/main/ListStudent'"> Teacher </a>  
         <a mat-button [routerLink]="'/main/ListStudent'"> Course </a>
-      </div>
-    </mat-toolbar-row>
-  
-    <!-- <mat-toolbar-row>
-        <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
-      </mat-toolbar-row> -->
+        <span class="example-spacer"></span>
+        <mat-icon routerLink="/Auth/Login" class="logout-icon">logout</mat-icon>
+      </mat-toolbar-row>
+
   </mat-toolbar>
 <router-outlet></router-outlet>
 <mat-toolbar color="primary">

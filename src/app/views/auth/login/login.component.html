@@ -1,12 +1,8 @@
 <div fxLayoutAlign="center stretch">
     <mat-card fxFlex="50">
         <mat-toolbar>
-            <span>Authentification</span>
-        </mat-toolbar>
-
-        <mat-toolbar>
-          <span>UserName : admin@admin.edu Password : 123456  </span>
-      </mat-toolbar>
+            <span style="width: 100%;text-align: center">Authentification</span>
+        </mat-toolbar>       
         <form fxLayoutAlign="stretch" fxLayout="column" (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
 
             <mat-form-field>
@@ -34,6 +30,10 @@
           
             
           </form>
+
+          <mat-toolbar>
+            UserName : admin@admin.edu Password : 123456
+        </mat-toolbar>
           
     </mat-card> 
 </div>
